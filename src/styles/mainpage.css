@@ -1,0 +1,118 @@
+.main-bg{
+    background: #F1F4FE;
+    width:70vw;
+    width: 100%;
+    
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    
+    
+  }
+  .main-box{
+    width: 40%;
+    
+    display: flex;
+    
+    flex-direction: column;
+    
+    align-self: center;
+    
+    
+  }
+  .text-box{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: #9e9e9e; 
+    padding: 10px;
+    margin-top:4px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  p{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-weight: 400;
+    
+  
+  }
+  .headText{
+    font-weight: 700;
+    font-size:25px;
+    /* line-height: 44px; */
+    text-align: center;
+
+    margin-bottom: 0;
+    letter-spacing: -0.5px;
+
+  }
+  .headText_bot{
+
+    margin-top:5px;
+    margin-bottom: 30px;
+    
+    font-weight: 400;
+    font-size:12px;
+    text-align: center;
+    color:#9e9e9e;
+  }
+  .sm-box{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+
+  }
+  .pw{
+    text-align: right;
+    font-size:10px;
+    color: #9e9e9e;
+    margin-top: 0;
+  }
+  .Next{
+    background-color: #4067ec;
+    border-color: #4067ec;
+    border:unset;
+    border-width: 2px;
+    border-radius: 0;
+    width: 100%;
+    color:white;
+    font-size: 12px;
+    padding-top:12px;
+    padding-bottom: 12px;
+  }
+  .Next:hover{
+    background-color: #6180e5;
+
+  }
+  .Next:active{
+    background-color: #113bc5;
+    /* border-radius: 3px; */
+    border-style: solid;
+  }
+  .underlined{
+    font-size:10px;
+    color:#9e9e9e;
+    margin-bottom: 150px;
+  }
+  .bold{
+    color:black;
+  }
+
+  .line-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .check-line
+  {
+    width: 32%;
+    border:0;
+    padding: 0;
+    /* background-color: #BDBDBD; */
+    
+    margin-top: 15px;
+  }
+ 

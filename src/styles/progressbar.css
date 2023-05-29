@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  :root {
+    --black: #333333;
+    --white: #ffffff;
+    --purple: #8057d7;
+    --gray: #aaaaaa;
+    --white:#fffffd;
+  }
+  
+  .progress-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px 0; /* Dont include in post */
+    padding: 0;
+    list-style: none;
+  }
+  
+  .progress-step {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex: auto;
+    position: relative;
+  }
+  .label_text
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .progress-step .step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    /* background: transparent; */
+    border-radius: 50%;
+    padding:20px;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 24px;
+    z-index: 1;
+    color: var(--purple);
+    /* The transition-delay is set ONLY for the transform value, not the others (the additional 0.5s on transform) */
+    transition: transform 0.5s ease 0.5s, background 0.5s ease,
+      border-color 0.5s ease;
+  }
+  
+  .progress-step.incomplete .step-number {
+    background: transparent;
+    border-color: var(--white);
+    border-width: 1px;
+    color: transparent;
+  }
+  
+  .progress-step.active .step-number {
+    background: var(--white);
+    border-color: var(--purple);
+    color: var(--purple);
+    transform: scale(1.2);
+  }
+  
+  .progress-step.complete .step-number {
+    background: var(--purple);
+    color: var(--white);
+  }
+  
+  .ph3 {
+    color:white!important;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top:10px;
+    padding-bottom: 10px;
+    color: var(--gray);
+  }
+  .ph4{
+    color:white;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  
+  .progress-step.active h3 {
+    color: var(--purple);
+  }
+  
+  .progress-step.complete h3 {
+    color: var(--purple);
+  }
+  
+  .progress-step:not(:last-child):before,
+  .progress-step:not(:last-child):after {
+    content: "";
+    position: absolute;
+    
+    width: 4px;
+    left: 20px;
+    top: 40px;
+  }
+  
+  .progress-step:before {
+    height: 50%;
+    background: var(--gray);
+  }
+  
+  .progress-step.complete:after {
+    background: var(--purple);
+    animation: progressWidth 0.5s ease forwards; /* forwards is key here to leave it at 100%. Otherwise it resets back to 0% */
+  }
+  
+  .progress-step.incomplete:after {
+    background: var(--purple);
+    animation: progressWidthReverse 0.5s ease forwards;
+  }
+  
+  @keyframes progressWidth {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 55%;
+    }
+  }
+  
+  @keyframes progressWidthReverse {
+    0% {
+      height: 55%;
+    }
+    100% {
+      height: 0%;
+    }
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .progress-button {
+    background: none;
+    cursor: pointer;
+    border: 1px solid var(--purple);
+    font-size: 18px;
+    padding: 18px;
+    color: var(--purple);
+    font-weight: 700;
+    margin: 0 10px;
+    min-width: 100px;
+    border-radius: 8px;
+  }
+  
